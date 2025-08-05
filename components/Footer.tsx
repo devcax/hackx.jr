@@ -174,7 +174,7 @@ export default function Footer() {
             className="border-t border-space-gradient-start/20 mt-16 pt-6 text-center content-center"
           >
             <p className="text-gray-400 text-sm">
-              © 2025 hackX . All rights reserved.
+              © 2025 hackX Jr. All rights reserved.
             </p>
           </motion.div>
         </div>

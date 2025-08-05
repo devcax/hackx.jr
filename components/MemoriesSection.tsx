@@ -26,7 +26,7 @@ export default function MemoriesSection() {
     {
       id: 1,
       image: "/images/gallery/1.webp",
-      title: "hackX 9.0 Grand Finale",
+      title: "hackX Jr. 8.0 Grand Finale",
       description: "Teams presenting their innovative solutions",
     },
     {
