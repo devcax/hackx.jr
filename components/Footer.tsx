@@ -65,7 +65,7 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
             >
               <Image
-                src="\images\jr-images\jr logo.png"
+                src="\images\jr-images\jr logo.webp"
                 alt="hackX Logo"
                 width={130}
                 height={80}

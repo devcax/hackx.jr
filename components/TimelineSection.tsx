@@ -274,7 +274,7 @@ export default function TimelineSection() {
                   {/* Inner circle */}
                   <div className="w-20 h-20 rounded-full bg-cosmic-deep/80 flex items-center justify-center overflow-hidden">
                     <Image
-                      src="images\jr-images\jr logo.png"
+                      src="images\jr-images\jr logo.webp"
                       alt="HackX Logo"
                       width={60}
                       height={30}

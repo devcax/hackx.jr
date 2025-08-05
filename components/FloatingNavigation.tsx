@@ -97,7 +97,7 @@ export default function FloatingNavigation() {
                   aria-label="Scroll to top"
                 >
                   <Image
-                    src="\images\jr-images\jr logo.png"
+                    src="\images\jr-images\jr logo.webp"
                     alt="hackX Jr. Logo"
                     width={70}
                     height={40}

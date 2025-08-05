@@ -184,7 +184,7 @@ export default function AboutSection() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                   >
                     <Image
-                      src="/images/jr-images/jr logo.png"
+                      src="/images/jr-images/jr logo.webp"
                       alt="hackX Jr. 8.0 Logo"
                       width={200}
                       height={120}

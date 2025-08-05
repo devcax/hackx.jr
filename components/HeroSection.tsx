@@ -11,6 +11,8 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
+
+
 // Floating Particles Component
 const FloatingParticles = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -211,14 +213,15 @@ const GlitchyBadge = () => {
           )}
           style={{
             textShadow: glitch
-              ? "2px 2px 0 #ff00ff, -2px -2px 0 #00ffff"
-              : "none",
-          }}
+              ? "2px 2px 0 #2b062bff, -2px -2px 0 #00ffff"
+              : "none","alignItems": "center",
+            display: "flex",}}
         >
           COMING SOON
         </span>
       </motion.div>
     </motion.div>
+    
   );
 };
 
