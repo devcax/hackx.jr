@@ -494,4 +494,4 @@ export default function HeroSection() {
     </section>
   );
 }
-
+export { HeroSection, TextGenerateEffect, GlitchyBadge, FloatingParticles };
