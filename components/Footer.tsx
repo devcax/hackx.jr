@@ -54,9 +54,16 @@ export default function Footer() {
     <>
       <footer
         ref={ref}
-        className="relative bg-gradient-to-b from-cosmic-deep via-cosmic-navy/90 to-cosmic-blue/80 border-t border-white/10 pt-20 pb-10 px-4"
+        className="relative border-t border-white/10 pt-20 pb-10 px-4"
       >
-        <div className="max-w-7xl mx-auto">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('/backgrounds/bg.png')] bg-cover bg-center bg-no-repeat" />
+          {/* Subtle gradient overlay for seamless transitions */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30" />
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {/* Column 1: Brand Info */}
             <motion.div

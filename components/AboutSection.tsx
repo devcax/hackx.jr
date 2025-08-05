@@ -38,10 +38,14 @@ export default function AboutSection() {
 
   return (
     <section ref={ref} className="relative py-32 px-4 overflow-hidden">
-      {/* Unchanged background */}
+      {/* Background image only */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-cosmic-deep via-cosmic-navy/90 to-cosmic-blue/80" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+        <div className="absolute inset-0 bg-[url('/backgrounds/bg.png')] bg-cover bg-center bg-no-repeat" />
+        {/* Subtle gradient overlay for seamless transitions */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-transparent" />
+        {/* Top and bottom fade effects */}
+        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">

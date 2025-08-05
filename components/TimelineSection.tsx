@@ -158,12 +158,19 @@ export default function TimelineSection() {
   return (
     <section ref={ref} className="relative py-24 px-4 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cosmic-blue/80 via-cosmic-navy/90 to-cosmic-deep" />
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('/backgrounds/bg.png')] bg-cover bg-center bg-no-repeat" />
+        {/* Subtle gradient overlay for seamless transitions */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
+        {/* Top and bottom fade effects */}
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
+      </div>
 
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute top-[15rem] right-10 w-96 h-96 bg-space-gradient-end/10 rounded-full blur-3xl"
+          className="absolute top-[15rem] right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"
           animate={{
             x: [0, -50, 0],
             y: [0, 30, 0],
@@ -180,8 +187,8 @@ export default function TimelineSection() {
           className="text-center mb-10"
         >
           <motion.div className="shine-effect inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
-            <Calendar className="w-4 h-4 inline text-space-gradient-start" />
-            <span className="text-space-gradient-start font-medium">
+            <Calendar className="w-4 h-4 inline text-white" />
+            <span className="text-white font-medium">
               Competition Timeline
             </span>
           </motion.div>
@@ -194,7 +201,7 @@ export default function TimelineSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="font-orbitron text-4xl md:text-6xl font-bold mb-6 bg-text-gradient bg-clip-text text-transparent py-1"
+              className="font-orbitron text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent py-1"
             >
               {currentTimeline.subtitle}
             </motion.h2>
@@ -208,11 +215,11 @@ export default function TimelineSection() {
 
         {/* Timeline Switcher */}
         <div className="flex justify-center mb-20">
-          <div className="bg-cosmic-navy/40 backdrop-blur-md p-1 rounded-xl border border-space-gradient-start/10">
+          <div className="bg-black/40 backdrop-blur-md p-1 rounded-xl border border-white/10">
             <div className="flex relative">
               {/* Active Indicator */}
               <motion.div
-                className="absolute h-full bg-gradient-to-r from-space-gradient-start/20 to-space-gradient-end/20 rounded-lg"
+                className="absolute h-full bg-gradient-to-r from-white/10 to-white/5 rounded-lg"
                 initial={false}
                 animate={{
                   x: activeTimeline === "hackx" ? 0 : "100%",
@@ -230,8 +237,8 @@ export default function TimelineSection() {
                   }
                   className={`relative z-10 px-6 py-3 rounded-lg font-rajdhani font-semibold transition-all duration-300 ${
                     activeTimeline === key
-                      ? "text-space-gradient-start"
-                      : "text-space-gradient-start/50 hover:text-space-gradient-start/70"
+                      ? "text-white"
+                      : "text-white/50 hover:text-white/70"
                   }`}
                 >
                   <div className="flex items-center gap-2">
@@ -255,7 +262,7 @@ export default function TimelineSection() {
             className="relative"
           >
             {/* Central line - starts after logo */}
-            <div className="absolute left-1/2 top-24 bottom-0 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-space-gradient-start/20 via-space-gradient-end/40 to-space-gradient-start/10" />
+            <div className="absolute left-1/2 top-24 bottom-0 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-white/20 via-white/40 to-white/10" />
 
             {/* Logo as timeline origin */}
             <motion.div
@@ -267,18 +274,16 @@ export default function TimelineSection() {
               {/* Logo container */}
               <div className="relative group">
                 {/* Outer glow ring */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-space-gradient-start/20 to-space-gradient-end/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/10 to-white/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Main container */}
-                <div className="relative bg-cosmic-navy/60 backdrop-blur-md p-4 rounded-full border border-space-gradient-start/20 group-hover:border-space-gradient-start/40 transition-all duration-300">
+                <div className="relative bg-black/60 backdrop-blur-md p-4 rounded-full border border-white/20 group-hover:border-white/40 transition-all duration-300">
                   {/* Inner circle */}
-                  <div className="w-20 h-20 rounded-full bg-cosmic-deep/80 flex items-center justify-center overflow-hidden">
-                    <Image
-                      src="images\jr-images\jr logo.png"
+                  <div className="w-20 h-20 rounded-full bg-black/80 flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/images/jr-images/jr logo.png"
                       alt="HackX Logo"
-                      width={60}
-                      height={30}
-                      className="object-contain"
+                      className="w-15 h-8 object-contain"
                     />
                   </div>
                 </div>
@@ -298,9 +303,9 @@ export default function TimelineSection() {
                 >
                   {/* Content Card */}
                   <div className="w-full md:w-5/12">
-                    <div className="bg-cosmic-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 m-4 hover:border-space-gradient-start/30 transition-all duration-300">
+                    <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 m-4 hover:border-white/30 transition-all duration-300 hover:bg-black/60">
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="text-xs font-semibold text-space-gradient-start">
+                        <span className="text-xs font-semibold text-white">
                           {item.phase}
                         </span>
                         <span className="text-gray-500 text-xs">•</span>
@@ -323,13 +328,13 @@ export default function TimelineSection() {
                   <div className="hidden md:flex w-2/12 items-center justify-center relative">
                     {/* Connector line */}
                     <div
-                      className={`absolute top-1/2 -translate-y-1/2 h-px w-1/2 bg-space-gradient-start/30 ${
+                      className={`absolute top-1/2 -translate-y-1/2 h-px w-1/2 bg-white/30 ${
                         index % 2 === 0 ? "right-1/2" : "left-1/2"
                       }`}
                     />
                     {/* Icon */}
-                    <div className="relative w-12 h-12 rounded-lg bg-gradient-to-br from-space-gradient-start/20 to-space-gradient-end/20 flex items-center justify-center">
-                      <item.icon className="w-6 h-6 text-space-gradient-start" />
+                    <div className="relative w-12 h-12 rounded-lg bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center border border-white/10">
+                      <item.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
 

@@ -212,7 +212,14 @@ export default function FAQSection() {
   return (
     <section ref={ref} className="relative py-24 px-4 overflow-hidden ">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cosmic-blue/80 via-cosmic-navy/90 to-cosmic-deep" />
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('/backgrounds/bg.png')] bg-cover bg-center bg-no-repeat" />
+        {/* Subtle gradient overlay for seamless transitions */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/15" />
+        {/* Top and bottom fade effects */}
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.div
@@ -222,8 +229,8 @@ export default function FAQSection() {
           className="text-center mb-12"
         >
           <motion.div className="shine-effect inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
-            <MessageCircle className="w-4 h-4 inline  text-space-gradient-start" />
-            <span className="text-space-gradient-start font-medium">
+            <MessageCircle className="w-4 h-4 inline text-white" />
+            <span className="text-white font-medium">
               AI Assistant
             </span>
           </motion.div>
@@ -244,12 +251,12 @@ export default function FAQSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-cosmic-navy/60 backdrop-blur-sm border border-space-gradient-start/20 rounded-2xl overflow-hidden shadow-2xl shadow-black/25">
+          <div className="bg-black/60 backdrop-blur-sm border border-white/20 rounded-2xl overflow-hidden shadow-2xl shadow-black/25">
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-space-gradient-start/10 to-space-gradient-end/10 p-4 border-b border-space-gradient-start/20">
+            <div className="bg-gradient-to-r from-black/10 to-gray-900/10 p-4 border-b border-white/20">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <motion.div className="w-10 h-10 bg-gradient-to-br from-space-gradient-start to-space-gradient-end rounded-full flex items-center justify-center">
+                  <motion.div className="w-10 h-10 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center">
                     <Image
                       src="/images/mascot-face.webp"
                       alt="hackX 10.0"
@@ -261,7 +268,7 @@ export default function FAQSection() {
                     <h4 className="font-orbitron font-semibold text-white">
                       Mascot
                     </h4>
-                    <p className="text-space-gradient-start text-sm flex items-center gap-1.5">
+                    <p className="text-white text-sm flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
                       Online
                     </p>
@@ -270,7 +277,7 @@ export default function FAQSection() {
 
                 <motion.button
                   onClick={clearChat}
-                  className="px-3 py-1.5 text-xs bg-cosmic-blue/50 text-gray-300 rounded-full hover:bg-space-gradient-start/20 hover:text-white transition-all duration-300 flex items-center gap-1.5"
+                  className="px-3 py-1.5 text-xs bg-black/50 text-gray-300 rounded-full hover:bg-black/20 hover:text-white transition-all duration-300 flex items-center gap-1.5"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -326,8 +333,8 @@ export default function FAQSection() {
                     <div
                       className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                         message.type === "bot"
-                          ? "bg-gradient-to-br from-space-gradient-start to-space-gradient-end"
-                          : "bg-cosmic-blue"
+                          ? "bg-gradient-to-br from-gray-600 to-gray-800"
+                          : "bg-black"
                       }`}
                     >
                       {message.type === "bot" ? (
@@ -345,13 +352,13 @@ export default function FAQSection() {
                     <div
                       className={`max-w-md px-4 py-3 rounded-2xl ${
                         message.type === "bot"
-                          ? "bg-cosmic-blue/50 text-gray-200 rounded-bl-sm"
-                          : "bg-space-gradient-start/20 text-white rounded-br-sm"
+                          ? "bg-black/50 text-gray-200 rounded-bl-sm"
+                          : "bg-gray-700/20 text-white rounded-br-sm"
                       }`}
                     >
                       {message.isLoading ? (
                         <div className="flex items-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin text-space-gradient-start" />
+                          <Loader2 className="w-4 h-4 animate-spin text-white" />
                           <span className="text-sm text-gray-300">
                             Mascot is thinking...
                           </span>
@@ -370,7 +377,7 @@ export default function FAQSection() {
                                     onClick={() =>
                                       handleQuestionClick(question)
                                     }
-                                    className="px-3 py-1.5 bg-cosmic-blue/40 text-space-gradient-start text-xs font-medium rounded-full border border-space-gradient-start/30 hover:bg-space-gradient-start/20 transition-all"
+                                    className="px-3 py-1.5 bg-black/40 text-white text-xs font-medium rounded-full border border-white/30 hover:bg-gray-800/20 transition-all"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.98 }}
                                   >
@@ -395,7 +402,7 @@ export default function FAQSection() {
             </div>
 
             {/* Chat Input */}
-            <div className="p-4 border-t border-space-gradient-start/20 bg-cosmic-navy/50">
+            <div className="p-4 border-t border-white/20 bg-black/50">
               <div className="flex items-center gap-3">
                 <input
                   type="text"
@@ -404,12 +411,12 @@ export default function FAQSection() {
                   onKeyPress={handleKeyPress}
                   placeholder="Ask me anything about hackX Jr. 8.0..."
                   disabled={isLoading}
-                  className="flex-1 bg-cosmic-blue/30 border border-space-gradient-start/20 rounded-full px-4 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-space-gradient-start/40 transition-all duration-300 disabled:opacity-50"
+                  className="flex-1 bg-black/30 border border-white/20 rounded-full px-4 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-white/40 transition-all duration-300 disabled:opacity-50"
                 />
                 <motion.button
                   onClick={handleSendMessage}
                   disabled={!inputMessage.trim() || isLoading}
-                  className="w-10 h-10 bg-gradient-to-br from-space-gradient-start to-space-gradient-end rounded-full flex items-center justify-center transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
+                  className="w-10 h-10 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
                   whileHover={{
                     scale: !inputMessage.trim() || isLoading ? 1 : 1.05,
                   }}
@@ -418,9 +425,9 @@ export default function FAQSection() {
                   }}
                 >
                   {isLoading ? (
-                    <Loader2 className="w-4 h-4 text-cosmic-deep animate-spin" />
+                    <Loader2 className="w-4 h-4 text-white animate-spin" />
                   ) : (
-                    <Send className="w-4 h-4 text-cosmic-deep" />
+                    <Send className="w-4 h-4 text-white" />
                   )}
                 </motion.button>
               </div>
@@ -436,17 +443,17 @@ export default function FAQSection() {
         }
 
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: rgba(31, 58, 77, 0.3);
+          background: rgba(0, 0, 0, 0.3);
           border-radius: 3px;
         }
 
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(214, 221, 230, 0.3);
+          background: rgba(255, 255, 255, 0.3);
           border-radius: 3px;
         }
 
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: rgba(214, 221, 230, 0.5);
+          background: rgba(255, 255, 255, 0.5);
         }
       `}</style>
     </section>

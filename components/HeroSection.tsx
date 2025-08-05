@@ -59,9 +59,9 @@ const FloatingParticles = () => {
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(214, 221, 230, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
         ctx.shadowBlur = 10;
-        ctx.shadowColor = "rgba(214, 221, 230, 0.5)";
+        ctx.shadowColor = "rgba(255, 255, 255, 0.5)";
         ctx.fill();
       });
 
@@ -189,12 +189,12 @@ const GlitchyBadge = () => {
       className="relative"
     >
       <motion.div
-        className="inline-block px-8 md:px-10 py-4 md:py-5 rounded-full bg-gradient-to-r from-cosmic-navy to-cosmic-blue border border-space-gradient-start/40 backdrop-blur-md relative overflow-hidden"
+        className="inline-block px-8 md:px-10 py-4 md:py-5 rounded-full bg-gradient-to-r from-black to-gray-800 border border-white/40 backdrop-blur-md relative overflow-hidden"
         animate={{
           boxShadow: [
-            "0 0 20px rgba(214, 221, 230, 0.3)",
-            "0 0 40px rgba(214, 221, 230, 0.6)",
-            "0 0 20px rgba(214, 221, 230, 0.3)",
+            "0 0 20px rgba(255, 255, 255, 0.3)",
+            "0 0 40px rgba(255, 255, 255, 0.6)",
+            "0 0 20px rgba(255, 255, 255, 0.3)",
           ],
         }}
         transition={{ duration: 3, repeat: Infinity }}
@@ -251,244 +251,230 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="w-full py-4 px-4">
-      <div className="bg-gray-600 rounded-2xl mx-auto max-w-10xl relative overflow-hidden">
-        <div className="relative h-[50vh] md:h-[60vh] flex flex-col justify-center bg-gray-700 rounded-2xl">
-          {/* Mouse following glow */}
-          <motion.div
-            className="pointer-events-none absolute inset-0 z-30 hidden md:block rounded-2xl"
-            style={{
-              background: `radial-gradient(600px circle at ${smoothMouseX}px ${smoothMouseY}px, rgba(214, 221, 230, 0.06), transparent 40%)`,
-            }}
-          />
+    <section className="w-full py-4 px-4 relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('/backgrounds/bg.png')] bg-cover bg-center bg-no-repeat" />
+        {/* Subtle gradient overlay for seamless transitions */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-transparent" />
+        {/* Top and bottom fade effects */}
+        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
+      </div>
+      
+      <div className="rounded-2xl mx-auto max-w-7xl relative overflow-hidden min-h-screen">
+        {/* Mouse following glow */}
+        <motion.div
+          className="pointer-events-none absolute inset-0 z-30 hidden md:block rounded-2xl"
+          style={{
+            background: `radial-gradient(600px circle at ${smoothMouseX}px ${smoothMouseY}px, rgba(255, 255, 255, 0.06), transparent 40%)`,
+          }}
+        />
 
-          {/* Floating Particles */}
-          <FloatingParticles />
+        {/* Floating Particles */}
+        <FloatingParticles />
 
-          {/* Background Video with Parallax */}
-          <motion.div className="absolute inset-0 z-0 rounded-2xl overflow-hidden" style={{ y }}>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover opacity-30"
-            >
-              <source src="/videos/slideshow.mp4" type="video/mp4" />
-              <source src="/videos/slideshow.webm" type="video/webm" />
-              Your browser does not support the video tag.
-            </video>
-            {/* Enhanced overlay with animated gradient */}
-            <motion.div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(55, 65, 81, 0.6) 50%, rgba(55, 65, 81, 0.8) 100%)",
-              }}
-              animate={{
-                background: [
-                  "linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(55, 65, 81, 0.6) 50%, rgba(55, 65, 81, 0.8) 100%)",
-                  "linear-gradient(135deg, rgba(55, 65, 81, 0.7) 0%, rgba(55, 65, 81, 0.5) 50%, rgba(55, 65, 81, 0.7) 100%)",
-                  "linear-gradient(135deg, rgba(55, 65, 81, 0.8) 0%, rgba(55, 65, 81, 0.6) 50%, rgba(55, 65, 81, 0.8) 100%)",
-                ],
-              }}
-              transition={{ duration: 5, repeat: Infinity }}
-            />
-          </motion.div>
-
-          {/* Main content */}
-          <motion.div
-            className="relative z-10 w-full max-w-5xl mx-auto px-4 h-full flex items-center justify-center"
-            style={{ opacity }}
+        {/* Background Video with Parallax */}
+        <motion.div className="absolute inset-0 z-0 rounded-2xl overflow-hidden" style={{ y }}>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-30"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
-              {/* Left Column: Text Content */}
-              <div className="text-center md:text-left flex flex-col items-center md:items-start justify-center">
-                <motion.div
-                  whileHover={{ rotateY: 5, rotateX: -5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  style={{ transformStyle: "preserve-3d", perspective: 1000 }}
-                  className="w-full"
+            <source src="/videos/slideshow.mp4" type="video/mp4" />
+            <source src="/videos/slideshow.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Enhanced overlay with animated gradient */}
+          <motion.div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%)",
+            }}
+            animate={{
+              background: [
+                "linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%)",
+                "linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%)",
+                "linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%)",
+              ],
+            }}
+            transition={{ duration: 5, repeat: Infinity }}
+          />
+        </motion.div>
+
+        {/* Main content */}
+        <motion.div
+          className="relative z-10 w-full max-w-5xl mx-auto px-4 h-full min-h-screen flex items-center justify-center"
+          style={{ opacity }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
+            {/* Left Column: Text Content */}
+            <div className="text-center md:text-left flex flex-col items-center md:items-start justify-center">
+              <motion.div
+                whileHover={{ rotateY: 5, rotateX: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                style={{ transformStyle: "preserve-3d", perspective: 1000 }}
+                className="w-full"
+              >
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.4 }}
+                  className="font-orbitron text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-4"
                 >
-                  <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.4 }}
-                    className="font-orbitron text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 md:mb-4 flex flex-col md:flex-row items-center md:items-baseline justify-center md:justify-start gap-2 md:gap-4"
+                  <motion.span
+                    style={{
+                      background:
+                        "linear-gradient(135deg, #FFFFFF 0%, #D1D5DB 50%, #9CA3AF 100%)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                    animate={{
+                      filter: [
+                        "drop-shadow(0 0 20px rgba(255, 255, 255, 0.5))",
+                        "drop-shadow(0 0 30px rgba(255, 255, 255, 0.8))",
+                        "drop-shadow(0 0 20px rgba(255, 255, 255, 0.5))",
+                      ],
+                    }}
+                    transition={{ duration: 3, repeat: Infinity }}
                   >
-                    <motion.h1
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 0.4 }}
-  className="font-orbitron text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-4"
->
-  <motion.span
-    style={{
-      background:
-        "linear-gradient(135deg, #D6DDE6 0%, #AAB6C2 50%, #FFFFFF 100%)",
-      backgroundClip: "text",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-    }}
-    animate={{
-      filter: [
-        "drop-shadow(0 0 20px rgba(214, 221, 230, 0.5))",
-        "drop-shadow(0 0 30px rgba(214, 221, 230, 0.8))",
-        "drop-shadow(0 0 20px rgba(214, 221, 230, 0.5))",
-      ],
-    }}
-    transition={{ duration: 3, repeat: Infinity }}
-  >
-    hackX Jr. 8.0 
-  </motion.span>
-</motion.h1>
+                    hackX Jr. 8.0 
+                  </motion.span>
+                </motion.h1>
+              </motion.div>
+
+              <div className="space-y-2 md:space-y-3 mb-6 md:mb-8 text-center md:text-left">
+                <TextGenerateEffect
+                  words="Inter-School Hackathon"
+                  className="font-ethnocentric text-lg sm:text-xl md:text-2xl font-light text-white"
+                  enableFlicker={true}
+                />
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.5, duration: 1 }}
+                  className="font-rajdhani text-sm sm:text-base md:text-lg text-gray-300"
+                >
+                  <span className="inline-block">
+                    The Legacy{" "}
                     <motion.span
-                      className="text-xl sm:text-2xl md:text-3xl"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, #D6DDE6 0%, #AAB6C2 50%, #FFFFFF 100%)",
-                        backgroundClip: "text",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                      }}
                       animate={{
-                        filter: [
-                          "drop-shadow(0 0 20px rgba(214, 221, 230, 0.5))",
-                          "drop-shadow(0 0 30px rgba(214, 221, 230, 0.8))",
-                          "drop-shadow(0 0 20px rgba(214, 221, 230, 0.5))",
-                        ],
+                        opacity: [0.5, 1, 0.5],
+                        color: ["#D6DDE6", "#AAB6C2", "#D6DDE6"],
                       }}
                       transition={{ duration: 2, repeat: Infinity }}
                     >
-                      
+                      Continues...
                     </motion.span>
-                  </motion.h1>
-                </motion.div>
-
-                <div className="space-y-2 md:space-y-3 mb-6 md:mb-8 text-center md:text-left">
-                  <TextGenerateEffect
-                    words="Inter-School Hackathon"
-                    className="font-ethnocentric text-lg sm:text-xl md:text-2xl font-light text-space-gradient-start"
-                    enableFlicker={true}
-                  />
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 1 }}
-                    className="font-rajdhani text-sm sm:text-base md:text-lg text-gray-300"
-                  >
-                    <span className="inline-block">
-                      The Legacy{" "}
-                      <motion.span
-                        animate={{
-                          opacity: [0.5, 1, 0.5],
-                          color: ["#D6DDE6", "#AAB6C2", "#D6DDE6"],
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        Continues...
-                      </motion.span>
-                    </span>
-                  </motion.p>
-                </div>
-
-                <div className="flex justify-center md:justify-start w-full">
-                  <GlitchyBadge />
-                </div>
+                  </span>
+                </motion.p>
               </div>
 
-              {/* Right Column: Enhanced Mascot */}
+              <div className="flex justify-center md:justify-start w-full">
+                <GlitchyBadge />
+              </div>
+            </div>
+
+            {/* Right Column: Enhanced Mascot */}
+            <motion.div
+              className="hidden md:flex items-center justify-center relative"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              style={{ paddingLeft: "100px" }}
+            >
               <motion.div
-                className="hidden md:flex items-center justify-center relative"
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}
-                style={{ paddingLeft: "100px" }}
+                className="absolute inset-0 blur-3xl"
+                animate={{
+                  background: [
+                    "radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%)",
+                    "radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%)",
+                    "radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%)",
+                  ],
+                }}
+                transition={{ duration: 4, repeat: Infinity }}
+              />
+              <motion.div
+                whileHover={{
+                  scale: 1.05,
+                  rotate: [0, -5, 5, -5, 0],
+                }}
+                transition={{
+                  scale: { type: "spring", stiffness: 300 },
+                  rotate: { duration: 0.5 },
+                }}
+                className="relative"
               >
-                <motion.div
-                  className="absolute inset-0 blur-3xl"
-                  animate={{
-                    background: [
-                      "radial-gradient(circle, rgba(214, 221, 230, 0.2) 0%, transparent 70%)",
-                      "radial-gradient(circle, rgba(214, 221, 230, 0.3) 0%, transparent 70%)",
-                      "radial-gradient(circle, rgba(214, 221, 230, 0.2) 0%, transparent 70%)",
-                    ],
-                  }}
-                  transition={{ duration: 4, repeat: Infinity }}
+                {/* Mascot image */}
+                <img
+                  src="/images/mascott.webp"
+                  alt="hackX Jr. Mascot"
+                  className="w-64 h-64 object-contain"
                 />
+                
                 <motion.div
-                  whileHover={{
-                    scale: 1.05,
-                    rotate: [0, -5, 5, -5, 0],
-                  }}
-                  transition={{
-                    scale: { type: "spring", stiffness: 300 },
-                    rotate: { duration: 0.5 },
-                  }}
-                  className="relative"
+                  className="absolute inset-0 pointer-events-none"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
                 >
-                   
-                  <motion.div
-                    className="absolute inset-0 pointer-events-none"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                  >
-                    {[...Array(6)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="absolute w-2 h-2 bg-white rounded-full"
-                        style={{
-                          top: `${20 + i * 15}%`,
-                          left: `${10 + i * 15}%`,
-                        }}
-                        animate={{
-                          scale: [0, 1, 0],
-                          opacity: [0, 1, 0],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          delay: i * 0.2,
-                        }}
-                      />
-                    ))}
-                  </motion.div>
+                  {[...Array(6)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-2 h-2 bg-white rounded-full"
+                      style={{
+                        top: `${20 + i * 15}%`,
+                        left: `${10 + i * 15}%`,
+                      }}
+                      animate={{
+                        scale: [0, 1, 0],
+                        opacity: [0, 1, 0],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        delay: i * 0.2,
+                      }}
+                    />
+                  ))}
                 </motion.div>
               </motion.div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
+        </motion.div>
 
-          {/* Enhanced Scroll Indicator */}
-          <motion.button
-            onClick={scrollToNext}
-            className="absolute bottom-4 md:bottom-12 left-1/2 -translate-x-1/2 text-space-gradient-start hover:text-white transition-colors duration-300 z-20"
+        {/* Enhanced Scroll Indicator */}
+        <motion.button
+          onClick={scrollToNext}
+          className="absolute bottom-4 md:bottom-12 left-1/2 -translate-x-1/2 text-white hover:text-gray-300 transition-colors duration-300 z-20"
+          animate={{
+            y: [0, 10, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{ duration: 2, repeat: Infinity }}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Scroll to next section"
+        >
+          <ChevronDown size={32} className="md:w-10 md:h-10" />
+          <motion.div
+            className="absolute inset-0 blur-xl"
             animate={{
-              y: [0, 10, 0],
-              scale: [1, 1.1, 1],
+              background: [
+                "radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%)",
+                "radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%)",
+              ],
             }}
-            transition={{ duration: 2, repeat: Infinity }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Scroll to next section"
-          >
-            <ChevronDown size={32} className="md:w-10 md:h-10" />
-            <motion.div
-              className="absolute inset-0 blur-xl"
-              animate={{
-                background: [
-                  "radial-gradient(circle, rgba(214, 221, 230, 0) 0%, rgba(214, 221, 230, 0.4) 100%)",
-                  "radial-gradient(circle, rgba(214, 221, 230, 0.4) 0%, rgba(214, 221, 230, 0) 100%)",
-                ],
-              }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-          </motion.button>
+            transition={{ duration: 1.5, repeat: Infinity }}
+          />
+        </motion.button>
 
-          {/* Enhanced gradient blend */}
-          <div className="absolute bottom-0 left-0 w-full h-12 md:h-20 bg-gradient-to-t from-gray-700 to-transparent pointer-events-none z-10 rounded-b-2xl" />
-        </div>
+        {/* Enhanced gradient blend */}
+        <div className="absolute bottom-0 left-0 w-full h-12 md:h-20 bg-gradient-to-t from-black to-transparent pointer-events-none z-10 rounded-b-2xl" />
       </div>
     </section>
   );
 }
-

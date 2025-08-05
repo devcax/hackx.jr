@@ -78,7 +78,14 @@ export default function MemoriesSection() {
   return (
     <section ref={ref} className="relative py-24 px-4 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cosmic-deep via-cosmic-navy/90 to-cosmic-blue/80" />
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('/backgrounds/bg.png')] bg-cover bg-center bg-no-repeat" />
+        {/* Subtle gradient overlay for seamless transitions */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/15" />
+        {/* Top and bottom fade effects */}
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.div

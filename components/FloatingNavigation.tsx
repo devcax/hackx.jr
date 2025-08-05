@@ -88,7 +88,7 @@ export default function FloatingNavigation() {
             transition={{ duration: 0.3 }}
             className="fixed top-4 left-0 right-0 z-50 flex justify-center"
           >
-            <motion.div className="bg-cosmic-navy/80 backdrop-blur-md border border-space-gradient-start/20 rounded-full px-6 py-3 shadow-2xl">
+            <motion.div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 shadow-2xl">
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center gap-6">
                 <motion.button
@@ -111,8 +111,8 @@ export default function FloatingNavigation() {
                     onClick={() => scrollToSection(item.id)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       activeSection === item.id
-                        ? "bg-space-gradient-start/20 text-space-gradient-start"
-                        : "text-gray-300 hover:text-space-gradient-start hover:bg-space-gradient-start/10"
+                        ? "bg-white/20 text-white"
+                        : "text-gray-300 hover:text-white hover:bg-white/10"
                     }`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -141,7 +141,7 @@ export default function FloatingNavigation() {
 
                 <motion.button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="w-10 h-10 rounded-full bg-space-gradient-start/20 flex items-center justify-center text-space-gradient-start ml-4"
+                  className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white ml-4"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -158,7 +158,7 @@ export default function FloatingNavigation() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -20, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-4 right-4 mt-2 bg-cosmic-navy/90 backdrop-blur-md border border-space-gradient-start/20 rounded-2xl p-4 shadow-2xl"
+                  className="absolute top-full left-4 right-4 mt-2 bg-black/90 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl"
                 >
                   <div className="grid grid-cols-2 gap-2">
                     {navItems.map((item) => (
@@ -167,8 +167,8 @@ export default function FloatingNavigation() {
                         onClick={() => scrollToSection(item.id)}
                         className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
                           activeSection === item.id
-                            ? "bg-space-gradient-start/20 text-space-gradient-start"
-                            : "text-gray-300 hover:text-space-gradient-start hover:bg-space-gradient-start/10"
+                            ? "bg-white/20 text-white"
+                            : "text-gray-300 hover:text-white hover:bg-white/10"
                         }`}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
@@ -193,14 +193,14 @@ export default function FloatingNavigation() {
             exit={{ scale: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-space-gradient-start to-space-gradient-end rounded-full flex items-center justify-center shadow-2xl z-50 hover:shadow-3xl transition-all duration-300"
+            className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center shadow-2xl z-50 hover:shadow-3xl transition-all duration-300"
             whileHover={{
               scale: 1.1,
-              boxShadow: "0 20px 40px rgba(214, 221, 230, 0.3)",
+              boxShadow: "0 20px 40px rgba(255, 255, 255, 0.1)",
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <ChevronUp className="w-6 h-6 text-cosmic-deep" />
+            <ChevronUp className="w-6 h-6 text-white" />
           </motion.button>
         )}
       </AnimatePresence>
