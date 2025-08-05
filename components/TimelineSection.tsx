@@ -21,49 +21,70 @@ export default function TimelineSection() {
   const hackXTimelineData = [
     {
       phase: "Phase 1",
-      title: "Idea Submission",
+      title: "Registration Open 📅",
       description:
-        "Submit your innovative startup ideas focusing on sustainable innovation. Teams can register and submit their initial concepts.",
+        "Participants can begin registering for the competition.",
       icon: Send,
-      date: "Week 1-2",
+      date: "6th August 2025",
       color: "from-blue-500 to-cyan-500",
     },
     {
       phase: "Phase 2",
-      title: "Initial Selection",
+      title: "Awareness Session 🎤",
       description:
-        "Expert panel reviews submissions and selects the most promising ideas. Selected teams advance to the next phase.",
+        "An introductory session to explain the competition details, expectations, and benefits.",
       icon: Star,
-      date: "Week 3",
+      date: " 13th August 2025",
       color: "from-purple-500 to-pink-500",
     },
     {
       phase: "Phase 3",
-      title: "Mentoring Sessions",
+      title: "Deadline for Proposal Submission 🛑",
       description:
-        "Selected teams receive guidance from industry experts and mentors to refine their business models and presentations.",
+        "Last day to submit proposals. Late submissions will not be accepted.",
       icon: Users,
-      date: "Week 4-5",
+      date: "5th September 2025",
       color: "from-green-500 to-emerald-500",
     },
     {
       phase: "Phase 4",
-      title: "Pitch Development",
+      title: "Online Workshop Series 1 💻",
       description:
-        "Teams develop their final pitches with comprehensive business plans, market analysis, and prototype development.",
+        "Virtual workshop to guide and mentor teams on refining their ideas.",
       icon: Lightbulb,
-      date: "Week 6-7",
+      date: "12th September 2025",
       color: "from-yellow-500 to-orange-500",
     },
     {
       phase: "Phase 5",
-      title: "Grand Finale",
+      title: " InnoX Semifinal 🚀",
       description:
-        "Final presentations to judges and investors. Winners receive prizes, funding opportunities, and industry recognition.",
+        "Selected teams pitch their ideas in the semifinal round for a chance to enter the finals.",
       icon: Trophy,
-      date: "Week 8",
+      date: "27th September 2025",
       color: "from-red-500 to-rose-500",
     },
+    {
+      phase: "Phase 6",
+      title: "Online Workshop Series 2 💡",
+      description:
+        "Second virtual workshop focused on developing and finalizing the project for the finals.",
+      icon: Calendar,
+      date: "1st October 2025",
+      color: "from-indigo-500 to-violet-500",
+    },
+    {
+      phase: "Phase 7",
+      title: "Grand Finals 🏆",
+      description:
+        "Top teams compete in the final round and winners are announced.",
+      icon: Code,
+      date: "10th October 2025",
+      color: "from-pink-500 to-purple-500",
+    },
+
+
+
   ];
 
   // Using same data for mockup - replace with actual data
