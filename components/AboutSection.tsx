@@ -1,6 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { Sparkles, Target, Users, Trophy, ArrowRight } from "lucide-react";
@@ -39,59 +38,72 @@ export default function AboutSection() {
 
   return (
     <section ref={ref} className="relative py-32 px-4 overflow-hidden">
-      {/* Enhanced background with animated gradient orbs */}
+      {/* Unchanged background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-cosmic-deep via-cosmic-navy/90 to-cosmic-blue/80" />
-
-        {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Header */}
+        {/* Header with left-aligned text and right-aligned mascot */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="flex items-center justify-between gap-6 mb-20"
         >
-          <motion.div className="shine-effect inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
-            <Sparkles className="w-4 h-4 inline  text-space-gradient-start" />
-            <span className="text-white/80 font-medium">About hackX Jr.</span>
-          </motion.div>
+          <div className="text-left">
+            <motion.div className="shine-effect inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
+              <Sparkles className="w-4 h-4 inline text-space-gradient-start" />
+              <span className="text-white/80 font-medium">About hackX Jr.</span>
+            </motion.div>
 
-          <h2 className="font-orbitron text-4xl md:text-6xl lg:text-6xl font-bold mb-6 py-1">
-            <motion.span
-              className="inline-block bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent py-1"
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Empowering
-            </motion.span>{" "}
-            <motion.span
-              className="inline-block bg-gradient-to-r from-space-gradient-start to-space-gradient-end bg-clip-text text-transparent py-1"
-              initial={{ opacity: 0, x: 20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              Innovation
-            </motion.span>
-          </h2>
+            <h2 className="font-orbitron text-4xl md:text-6xl lg:text-6xl font-bold mb-6 py-1">
+              <motion.span
+                className="inline-block bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent py-1"
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Empowering
+              </motion.span>{" "}
+              <motion.span
+                className="inline-block bg-gradient-to-r from-space-gradient-start to-space-gradient-end bg-clip-text text-transparent py-1"
+                initial={{ opacity: 0, x: 20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                Innovation
+              </motion.span>
+            </h2>
 
-          <motion.p
-            className="text-xl text-white/60 max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            <motion.p
+              className="text-xl text-white/60 max-w-2xl text-left"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Where visionary ideas meet transformative opportunities
+            </motion.p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Where visionary ideas meet transformative opportunities
-          </motion.p>
+            <Image
+              src="images\mascott.webp"
+              alt="hackX Jr. Mascot"
+              width={320}
+              height={320}
+              className="object-contain"
+            />
+          </motion.div>
         </motion.div>
 
         {/* Main content grid */}
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
-          {/* Text content with enhanced styling */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -151,7 +163,6 @@ export default function AboutSection() {
             </motion.button>
           </motion.div>
 
-          {/* Enhanced visual element */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -159,24 +170,10 @@ export default function AboutSection() {
             className="relative"
           >
             <div className="relative">
-              {/* Floating elements */}
-              {/* <motion.div
-                className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl opacity-20 blur-xl"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
-              <motion.div
-                className="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl opacity-20 blur-xl"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              /> */}
-
-              {/* Main card */}
               <motion.div
                 className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-12 border border-white/20 overflow-hidden"
                 whileHover={{ borderColor: "rgba(255,255,255,0.3)" }}
               >
-                {/* Inner glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-space-gradient-start/20 to-space-gradient-end/20 blur-3xl" />
 
                 <div className="relative text-center space-y-6">
@@ -187,7 +184,7 @@ export default function AboutSection() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                   >
                     <Image
-                      src="\images\jr-images\jr logo.png"
+                      src="/images/jr-images/jr logo.png"
                       alt="hackX Jr. 8.0 Logo"
                       width={200}
                       height={120}
@@ -201,7 +198,6 @@ export default function AboutSection() {
                     <p className="text-white/60">2016 - 2025</p>
                   </div>
 
-                  {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
                     <div>
                       <p className="text-2xl font-bold text-white">250+</p>
@@ -222,7 +218,6 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Enhanced features grid */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -239,11 +234,9 @@ export default function AboutSection() {
               className="group relative"
             >
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 h-full overflow-hidden transition-all duration-300 group-hover:border-white/20">
-                {/* Gradient background on hover */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                 />
-
                 <div className="relative w-14 h-14 rounded-lg bg-gradient-to-br from-space-gradient-start/20 to-space-gradient-end/20 flex items-center justify-center mb-6">
                   <feature.icon className="w-7 h-7 text-space-gradient-start" />
                 </div>
@@ -256,7 +249,6 @@ export default function AboutSection() {
                   {feature.description}
                 </p>
 
-                {/* Decorative corner accent */}
                 <div
                   className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${feature.color} opacity-5 rounded-bl-3xl`}
                 />

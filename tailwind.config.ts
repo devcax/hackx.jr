@@ -71,7 +71,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "space-gradient":
-          "linear-gradient(135deg, #0A121A 0%, #132833 50%, #1F3A4D 100%)",
+          "linear-gradient(135deg, #0c151e 0%, #0c151e 50%, #0c151e 100%)",
         "text-gradient": "linear-gradient(135deg, #D6DDE6 0%, #AAB6C2 100%)",
       },
       animation: {
