@@ -413,7 +413,7 @@ export default function HeroSection() {
                 <img
                   src="/images/mascott.webp"
                   alt="hackX Jr. Mascot"
-                  className="w-64 h-64 object-contain"
+                  className="w-100 h-100 object-contain"
                 />
                 
                 <motion.div

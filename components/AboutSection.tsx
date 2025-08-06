@@ -49,61 +49,45 @@ export default function AboutSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Header with left-aligned text and right-aligned mascot */}
+        {/* Header with centered text */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="flex items-center justify-between gap-6 mb-20"
+          className="text-center mb-20"
         >
-          <div className="text-left">
-            <motion.div className="shine-effect inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
-              <Sparkles className="w-4 h-4 inline text-space-gradient-start" />
-              <span className="text-white/80 font-medium">About hackX Jr.</span>
-            </motion.div>
-
-            <h2 className="font-orbitron text-4xl md:text-6xl lg:text-6xl font-bold mb-6 py-1">
-              <motion.span
-                className="inline-block bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent py-1"
-                initial={{ opacity: 0, x: -20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                Empowering
-              </motion.span>{" "}
-              <motion.span
-                className="inline-block bg-gradient-to-r from-space-gradient-start to-space-gradient-end bg-clip-text text-transparent py-1"
-                initial={{ opacity: 0, x: 20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                Innovation
-              </motion.span>
-            </h2>
-
-            <motion.p
-              className="text-xl text-white/60 max-w-2xl text-left"
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Where visionary ideas meet transformative opportunities
-            </motion.p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <Image
-              src="images\mascott.webp"
-              alt="hackX Jr. Mascot"
-              width={320}
-              height={320}
-              className="object-contain"
-            />
+          <motion.div className="shine-effect inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-8">
+            <Sparkles className="w-4 h-4 inline text-space-gradient-start" />
+            <span className="text-white/80 font-medium">About hackX Jr.</span>
           </motion.div>
+
+          <h2 className="font-orbitron text-4xl md:text-6xl lg:text-6xl font-bold mb-6 py-1">
+            <motion.span
+              className="inline-block bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent py-1"
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Empowering
+            </motion.span>{" "}
+            <motion.span
+              className="inline-block bg-gradient-to-r from-space-gradient-start to-space-gradient-end bg-clip-text text-transparent py-1"
+              initial={{ opacity: 0, x: 20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              Innovation
+            </motion.span>
+          </h2>
+
+          <motion.p
+            className="text-xl text-white/60 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            Where visionary ideas meet transformative opportunities
+          </motion.p>
         </motion.div>
 
         {/* Main content grid */}
