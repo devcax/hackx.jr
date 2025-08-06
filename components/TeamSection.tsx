@@ -47,7 +47,7 @@ export default function TeamSection() {
     {
       name: "Pasindu Kumarage",
       role: "hackX Jr. Coordinator",
-      image: "/images/team/sajith.webp",
+      image: "/images/team/PASINDU.webp",
       social: {
         email: "samantha@imssa.lk",
         phone: "123-456-7890",
@@ -56,7 +56,7 @@ export default function TeamSection() {
     {
       name: "Lakshika Shankari",
       role: "hackX Jr. Coordinator",
-      image: "/images/team/dinethya.webp",
+      image: "/images/team/Lakshika.webp",
       social: {
         email: "ravindu@imssa.lk",
         phone: "123-456-7890",
@@ -65,7 +65,7 @@ export default function TeamSection() {
     {
       name: "Nadeesha Nilupul",
       role: "Media Coordinator",
-      image: "/images/team/thenul.webp",
+      image: "/images/team/NADEESHA.webp",
       social: {
         email: "ishara@imssa.lk",
         phone: "123-456-7890",
@@ -74,7 +74,7 @@ export default function TeamSection() {
     {
       name: "Bodhana Jayawickrama",
       role: "ideasprint Coordinator",
-      image: "/images/team/rochelle.webp",
+      image: "/images/team/BODHANA.webp",
       social: {
         email: "kasun@imssa.lk",
         phone: "123-456-7890",

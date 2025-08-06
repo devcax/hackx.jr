@@ -21,7 +21,7 @@ export default function AwardsSection() {
     {
       position: "1st Place",
       title: "Champion",
-      prize: "LKR 150,000",
+      prize: "LKR 75,000",
       icon: Crown,
       color: "from-yellow-400 via-yellow-500 to-yellow-600",
       bgGradient: "from-yellow-500/20 via-yellow-500/10 to-transparent",
@@ -31,7 +31,7 @@ export default function AwardsSection() {
     {
       position: "2nd Place",
       title: "Runner-up",
-      prize: "LKR 100,000",
+      prize: "LKR 50,000",
       icon: Trophy,
       color: "from-gray-300 via-gray-400 to-gray-500",
       bgGradient: "from-gray-400/20 via-gray-400/10 to-transparent",
@@ -41,7 +41,7 @@ export default function AwardsSection() {
     {
       position: "3rd Place",
       title: "Second Runner-up",
-      prize: "LKR 75,000",
+      prize: "LKR 30,000",
       icon: Medal,
       color: "from-amber-600 via-amber-700 to-amber-800",
       bgGradient: "from-amber-700/20 via-amber-700/10 to-transparent",

@@ -113,7 +113,7 @@ const TextGenerateEffect = ({
       filter: "blur(0px)",
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 100,
       },
@@ -123,7 +123,7 @@ const TextGenerateEffect = ({
       filter: "blur(10px)",
       y: 20,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 100,
       },
@@ -204,19 +204,25 @@ const GlitchyBadge = () => {
           animate={{ x: ["-100%", "100%"] }}
           transition={{ duration: 3, repeat: Infinity, repeatDelay: 3 }}
         />
-        <span
-          className={cn(
-            "font-orbitron text-xs md:text-sm font-semibold text-white relative z-10",
-            glitch && "animate-pulse"
-          )}
-          style={{
-            textShadow: glitch
-              ? "2px 2px 0 #ff00ff, -2px -2px 0 #00ffff"
-              : "none",
-          }}
-        >
-          COMING SOON
-        </span>
+        <a 
+  href="https://docs.google.com/forms/d/e/1FAIpQLScp96RCDPueL44tYVHQ7T8wEIGjElyYC__sMZT9ZaHwPA7rZQ/viewform?usp=header"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span
+    className={cn(
+      "font-orbitron text-xs md:text-sm font-semibold text-white relative z-10 cursor-pointer hover:opacity-80 transition-opacity",
+      glitch && "animate-pulse"
+    )}
+    style={{
+      textShadow: glitch
+        ? "2px 2px 0 #ff00ff, -2px -2px 0 #00ffff"
+        : "none",
+    }}
+  >
+    REGISTER NOW
+  </span>
+</a>
       </motion.div>
     </motion.div>
   );

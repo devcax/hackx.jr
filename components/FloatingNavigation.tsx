@@ -17,7 +17,7 @@ export default function FloatingNavigation() {
     // { id: "awards", label: "Awards" },
     // { id: "details", label: "Details" },
     { id: "team", label: "Team" },
-    { id: "partners", label: "Partners" },
+    
     { id: "memories", label: "Memories" },
     { id: "faq", label: "FAQ" },
   ];
