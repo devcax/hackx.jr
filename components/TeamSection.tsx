@@ -79,7 +79,16 @@ export default function TeamSection() {
         email: "kasun@imssa.lk",
         phone: "123-456-7890",
       },
+    }, {
+      name: "Reshma Mohomad",
+      role: "partnership Coordinator",
+      image: "/images/team/RESHMA.webp",
+      social: {
+        email: "kasun@imssa.lk",
+        phone: "123-456-7890",
+      },
     },
+    
   ];
 
   return (
