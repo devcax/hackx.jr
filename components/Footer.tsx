@@ -121,6 +121,7 @@ export default function Footer() {
             </motion.div>
 
             {/* Column 3: Contact Us */}
+            
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -128,7 +129,7 @@ export default function Footer() {
             >
               <h4 className="font-orbitron text-lg font-semibold text-white mb-5 relative pb-2">
                 Contact Us
-                <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-space-gradient-start rounded-full"></span>
+                {/* <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-space-gradient-start rounded-full"></span> */}
               </h4>
               <div className="space-y-4">
                 {contactInfo.map((item) => (
@@ -153,6 +154,7 @@ export default function Footer() {
                 ))}
               </div>
             </motion.div>
+
 
             {/* Column 4: Connect With Us */}
             <motion.div

@@ -18,22 +18,25 @@ export default function AwardsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const awardsData = [
+ const awardsData = [
     {
       position: "1st Place",
       title: "Champion",
       prize: "LKR 75,000",
-      icon: Crown,
+      icon: "Images/firstplace.png", // Use image path
       color: "from-yellow-400 via-yellow-500 to-yellow-600",
       bgGradient: "from-yellow-500/20 via-yellow-500/10 to-transparent",
       shadowColor: "rgba(251, 191, 36, 0.5)",
       glowColor: "yellow",
+      
+      
+
     },
     {
       position: "2nd Place",
       title: "Runner-up",
       prize: "LKR 50,000",
-      icon: Trophy,
+      icon: "Images/secondplace.png", // Use image path
       color: "from-gray-300 via-gray-400 to-gray-500",
       bgGradient: "from-gray-400/20 via-gray-400/10 to-transparent",
       shadowColor: "rgba(156, 163, 175, 0.5)",
@@ -43,13 +46,16 @@ export default function AwardsSection() {
       position: "3rd Place",
       title: "Second Runner-up",
       prize: "LKR 30,000",
-      icon: Medal,
+      icon: "Images/thirdplace.png", // Use image path
       color: "from-amber-600 via-amber-700 to-amber-800",
       bgGradient: "from-amber-700/20 via-amber-700/10 to-transparent",
       shadowColor: "rgba(217, 119, 6, 0.5)",
       glowColor: "amber",
     },
   ];
+// ...existing code...
+
+// Remove this block; the correct icon rendering is already handled inside the map callback below.
 
   // Reorder for display: 2nd, 1st, 3rd
   const awards = [awardsData[1], awardsData[0], awardsData[2]];
@@ -152,7 +158,13 @@ export default function AwardsSection() {
                         <div
                           className={`w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-2xl bg-gradient-to-br ${award.color} flex items-center justify-center shadow-2xl`}
                         >
-                          <award.icon className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+                          <Image
+                            src={award.icon}
+                            alt={`${award.position} icon`}
+                            width={48}
+                            height={48}
+                            className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                          />
                         </div>
                       </motion.div>
 

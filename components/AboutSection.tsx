@@ -146,14 +146,7 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <motion.button
-              className="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-space-gradient-start to-space-gradient-end rounded-full font-medium text-slate-800 shadow-lg shadow-space-gradient-start/25"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More About hackX Jr.
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            
           </motion.div>
 
           <motion.div
