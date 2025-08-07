@@ -13,17 +13,17 @@ export default function FAQSection() {
     {
       question: "What is hackX Jr. 8.0?",
       answer:
-        "hackX Jr. 8.0 is an exciting, innovative hackathon designed for young creators to showcase their skills, collaborate on projects, and solve real-world challenges through technology and creativity.",
+        "hackX Jr. 8.0 is an inter-school hackathon that empowers students to develop innovative solutions and demonstrate their technical creativity.",
     },
     {
       question: "Who can participate?",
       answer:
-        "The event is open to students aged 13-18 who are passionate about technology, coding, and innovation. Participants can join individually or in teams of up to 4 members.",
+        "hackX Jr. 8.0 is an inter-school science hackathon open to school students from grades 9 to 13 who are passionate about science, technology, and innovation. Participants can join individually or in teams of 1 to 5 members.",
     },
     {
       question: "What's the theme for this year?",
       answer:
-        "This year's theme is 'Innovate for Tomorrow,' focusing on sustainable solutions and forward-thinking ideas to address global challenges.",
+        "The theme for hackX Jr. 8.0 is 'Give Shapes to Ideas.' It encourages participants to turn their creative thoughts and imaginative ideas into real, workable solutions. The focus is on bringing concepts to life through design, innovation, and problem-solving.",
     },
     {
       question: "What are the prizes?",
@@ -38,7 +38,7 @@ export default function FAQSection() {
     {
       question: "When will hackX Jr 8.0 take place?",
       answer:
-        "hackX Jr. 8.0 is scheduled for [insert date here], with specific timings and registration details available on the official website.",
+        "hackX Jr. 8.0 will take place on the 10 th of November, 2025.",
     },
   ];
 

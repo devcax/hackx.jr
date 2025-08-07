@@ -106,7 +106,7 @@ export default function MemoriesSection() {
           </h2>
 
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Relive the inspiring moments from previous hackX events and see the
+            Relive the inspiring moments from previous hackX Jr. events and see the
             passion for innovation in action
           </p>
         </motion.div>

@@ -34,7 +34,7 @@ export default function TimelineSection() {
       description:
         "An introductory session to explain the competition details, expectations, and benefits.",
       icon: Star,
-      date: " 21th August 2025",
+      date: " 21st August 2025",
       color: "from-purple-500 to-pink-500",
     },
     {
@@ -70,7 +70,7 @@ export default function TimelineSection() {
       description:
         "Second virtual workshop focused on developing and finalizing the project for the finals.",
       icon: Calendar,
-      date: "1st October 2025",
+      date: "11th October 2025",
       color: "from-indigo-500 to-violet-500",
     },
     {
@@ -79,7 +79,7 @@ export default function TimelineSection() {
       description:
         "Top teams compete in the final round and winners are announced.",
       icon: Code,
-      date: "10th October 2025",
+      date: "10th November 2025",
       color: "from-pink-500 to-purple-500",
     },
 

@@ -73,7 +73,7 @@ export default function TeamSection() {
     },
     {
       name: "Bodhana Jayawickrama",
-      role: "ideasprint Coordinator",
+      role: "Financial Coordinator",
       image: "/images/team/BODHANA.webp",
       social: {
         email: "kasun@imssa.lk",
@@ -81,7 +81,7 @@ export default function TeamSection() {
       },
     }, {
       name: "Reshma Mohomad",
-      role: "partnership Coordinator",
+      role: "Partnership Coordinator",
       image: "/images/team/RESHMA.webp",
       social: {
         email: "kasun@imssa.lk",

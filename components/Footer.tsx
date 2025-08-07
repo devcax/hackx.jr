@@ -48,8 +48,8 @@ export default function Footer() {
     },
     {
       icon: Phone,
-      text: "+94 12 345 6789",
-      href: "tel:+94123456789",
+      text: "+94 719846904",
+      href: "tel:+94719846904",
     },
   ];
 

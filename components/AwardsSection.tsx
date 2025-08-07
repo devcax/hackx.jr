@@ -34,7 +34,7 @@ export default function AwardsSection() {
     },
     {
       position: "2nd Place",
-      title: "Runner-up",
+      title: "First Runner-up",
       prize: "LKR 50,000",
       icon: Award, /*"Images/secondplace.png"*/// Use image path
       color: "from-gray-300 via-gray-400 to-gray-500",

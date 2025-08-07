@@ -117,7 +117,7 @@ export default function AboutSection() {
                   is Sri Lanka's premier inter-school hackathon,
                   organized by the{" "}
                   <span className="text-white font-semibold">IMSSA</span> of the
-                  University of Kelaniya partnering with Ministry of Science and Technology
+                  University of Kelaniya partnering with <span className="text-white font-semibold">Ministry of Science and Technology</span>
                 </p>
               </motion.div>
 
@@ -134,9 +134,9 @@ export default function AboutSection() {
                   </h3>
                 </div>
                 <p className="text-gray-400">
-                  Celebrating the Eighth Edition of empowering creativity, with the theme “Give Shapes to Ideas.”{" "}
+                  Celebrating the Eighth Edition of empowering creativity, with the theme {" "}
                   <span className="text-white font-medium">
-                    "Sustainable Innovation"
+                    “Give Shapes to Ideas.”
                   </span>
                 </p>
               </motion.div>
@@ -179,9 +179,9 @@ export default function AboutSection() {
                   </motion.div>
                   <div className="space-y-2">
                     <p className="text-2xl font-semibold bg-gradient-to-r from-space-gradient-start to-space-gradient-end bg-clip-text text-transparent">
-                      A Decade of Innovation
+                      A Legacy of Innovation
                     </p>
-                    <p className="text-white/60">2016 - 2025</p>
+                    <p className="text-white/60">2018 - 2025</p>
                   </div>
 
                   <div className="grid grid-cols-3 gap-4 pt-10 border-t border-white/15">
