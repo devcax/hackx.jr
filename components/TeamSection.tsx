@@ -49,8 +49,8 @@ export default function TeamSection() {
       role: "hackX Jr. Coordinator",
       image: "/images/team/PASINDU.webp",
       social: {
-        email: "samantha@imssa.lk",
-        phone: "123-456-7890",
+        email: "pasindukumarage28@gmail.com",
+        phone: "+94 719846904",
       },
     },
     {
@@ -58,8 +58,8 @@ export default function TeamSection() {
       role: "hackX Jr. Coordinator",
       image: "/images/team/Lakshika.webp",
       social: {
-        email: "ravindu@imssa.lk",
-        phone: "123-456-7890",
+        email: "slshankari16@gmail.com",
+        phone: "+94 76 234 9710",
       },
     },
     {

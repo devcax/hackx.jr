@@ -34,7 +34,7 @@ export default function TimelineSection() {
       description:
         "An introductory session to explain the competition details, expectations, and benefits.",
       icon: Star,
-      date: " 13th August 2025",
+      date: " 21th August 2025",
       color: "from-purple-500 to-pink-500",
     },
     {
