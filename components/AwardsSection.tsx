@@ -12,6 +12,7 @@ import {
   Zap,
   Target,
 } from "lucide-react";
+import Image from "next/image"; 
 
 export default function AwardsSection() {
   const ref = useRef(null);

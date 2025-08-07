@@ -21,7 +21,7 @@ export default function TimelineSection() {
   const hackXTimelineData = [
     {
       phase: "Phase 1",
-      title: "Registration Open 📅",
+      title: "Registration Open",
       description:
         "Participants can begin registering for the competition.",
       icon: Send,
@@ -30,7 +30,7 @@ export default function TimelineSection() {
     },
     {
       phase: "Phase 2",
-      title: "Awareness Session 🎤",
+      title: "Awareness Session",
       description:
         "An introductory session to explain the competition details, expectations, and benefits.",
       icon: Star,
@@ -39,7 +39,7 @@ export default function TimelineSection() {
     },
     {
       phase: "Phase 3",
-      title: "Deadline for Proposal Submission 🛑",
+      title: "Deadline for Proposal Submission",
       description:
         "Last day to submit proposals. Late submissions will not be accepted.",
       icon: Users,
@@ -48,7 +48,7 @@ export default function TimelineSection() {
     },
     {
       phase: "Phase 4",
-      title: "Online Workshop Series 1 💻",
+      title: "Online Workshop Series 1",
       description:
         "Virtual workshop to guide and mentor teams on refining their ideas.",
       icon: Lightbulb,
@@ -57,7 +57,7 @@ export default function TimelineSection() {
     },
     {
       phase: "Phase 5",
-      title: " InnoX Semifinal 🚀",
+      title: " InnoX Semifinal",
       description:
         "Selected teams pitch their ideas in the semifinal round for a chance to enter the finals.",
       icon: Trophy,
@@ -66,7 +66,7 @@ export default function TimelineSection() {
     },
     {
       phase: "Phase 6",
-      title: "Online Workshop Series 2 💡",
+      title: "Online Workshop Series 2",
       description:
         "Second virtual workshop focused on developing and finalizing the project for the finals.",
       icon: Calendar,
@@ -75,7 +75,7 @@ export default function TimelineSection() {
     },
     {
       phase: "Phase 7",
-      title: "Grand Finals 🏆",
+      title: "Grand Finals",
       description:
         "Top teams compete in the final round and winners are announced.",
       icon: Code,
@@ -163,7 +163,7 @@ export default function TimelineSection() {
         {/* Subtle gradient overlay for seamless transitions */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/20" />
         {/* Top and bottom fade effects */}
-        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/50 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
       </div>
 
@@ -213,43 +213,7 @@ export default function TimelineSection() {
           </p>
         </motion.div>
 
-        {/* Timeline Switcher */}
-        <div className="flex justify-center mb-20">
-          <div className="bg-black/40 backdrop-blur-md p-1 rounded-xl border border-white/10">
-            <div className="flex relative">
-              {/* Active Indicator */}
-              <motion.div
-                className="absolute h-full bg-gradient-to-r from-white/10 to-white/5 rounded-lg"
-                initial={false}
-                animate={{
-                  x: activeTimeline === "hackx" ? 0 : "100%",
-                  width: activeTimeline === "hackx" ? "50%" : "50%",
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              />
-
-              {/* Tab Buttons */}
-              {Object.entries(timelines).map(([key, timeline]) => (
-                <button
-                  key={key}
-                  onClick={() =>
-                    setActiveTimeline(key as keyof typeof timelines)
-                  }
-                  className={`relative z-10 px-6 py-3 rounded-lg font-rajdhani font-semibold transition-all duration-300 ${
-                    activeTimeline === key
-                      ? "text-white"
-                      : "text-white/50 hover:text-white/70"
-                  }`}
-                >
-                  <div className="flex items-center gap-2">
-                    <timeline.icon className="w-4 h-4" />
-                    <span>{timeline.title}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
+        
 
         {/* Timeline Container with Animation */}
         <AnimatePresence mode="wait">
@@ -281,9 +245,10 @@ export default function TimelineSection() {
                   {/* Inner circle */}
                   <div className="w-20 h-20 rounded-full bg-black/80 flex items-center justify-center overflow-hidden">
                     <img
-                      src="/images/jr-images/jr logo.png"
+                      src="\images\logoX.png"
                       alt="HackX Logo"
-                      className="w-15 h-8 object-contain"
+                      className="w-40 h-40 object-contain"
+
                     />
                   </div>
                 </div>

@@ -34,7 +34,12 @@ export default function AboutSection() {
       description: "Build connections and gain investor backing",
       color: "from-green-500 to-emerald-500",
     },
-  ];
+  ];<div className="absolute inset-0">
+  <div className="absolute inset-0 bg-[url('/backgrounds/bg.png')] bg-cover bg-center bg-no-repeat" />
+  {/* Subtle gradient overlay for seamless transitions */}
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-transparent" />
+</div>
+
 
   return (
     <section ref={ref} className="relative py-32 px-4 overflow-hidden">
@@ -186,17 +191,17 @@ export default function AboutSection() {
                     <p className="text-white/60">2016 - 2025</p>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                  <div className="grid grid-cols-3 gap-4 pt-10 border-t border-white/15">
                     <div>
-                      <p className="text-2xl font-bold text-white">250+</p>
+                      <p className="text-4xl font-bold text-white">250+</p>
                       <p className="text-sm text-white/60">Participants</p>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">50+</p>
+                      <p className="text-4xl font-bold text-white">50+</p>
                       <p className="text-sm text-white/60">Schools</p>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-white">100+</p>
+                      <p className="text-4xl font-bold text-white">100+</p>
                       <p className="text-sm text-white/60">Submissions</p>
                     </div>
                   </div>

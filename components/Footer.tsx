@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  Instagram,
+  
   Facebook,
-  Youtube,
+  
   Mail,
   MapPin,
   ChevronRight,
@@ -19,24 +19,27 @@ export default function Footer() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const socialLinks = [
-    { icon: Facebook, href: "#" },
-    { icon: Instagram, href: "#" },
-    { icon: Youtube, href: "#" },
+    { icon: Facebook, href: "https://www.facebook.com/hackXJunior/" },
+    
   ];
 
   const quickLinks = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Guidelines", href: "#" },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
 
-    { name: "Memories", href: "#" },
+    { name: "Timeline", href: "#timeline" },
+    { name: "Team", href: "#team" },
+
+    { name: "Memories", href: "#memories" },
+    
+    
   ];
 
   const contactInfo = [
     {
       icon: MapPin,
       text: "Department of Industrial Management, University of Kelaniya",
-      href: "https://www.kelaniya.ac.lk/department-of-industrial-management/",
+      href: "https://www.google.com/maps?client=firefox-b-d&um=1&ie=UTF-8&fb=1&gl=lk&sa=X&geocode=KdsZmeccWOI6MWRE3YdDTFjZ&daddr=XWC8%2BX83,+University+of+Kelaniya,+Peliyagoda,"
     },
     {
       icon: Mail,
@@ -180,9 +183,10 @@ export default function Footer() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="border-t border-space-gradient-start/20 mt-16 pt-6 text-center content-center"
           >
-            <p className="text-gray-400 text-sm">
-              © 2025 hackX Jr. All rights reserved.
+            <p className="text-gray-400 text-sm text-left">
+              Organized by the Department of Industrial Management, University of Kelaniya  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; © 2025 hackX Jr. All rights reserved.
             </p>
+            
           </motion.div>
         </div>
       </footer>

@@ -33,7 +33,7 @@ export default function FAQSection() {
     {
       question: "How long is the competition?",
       answer:
-        "The hackathon spans 24 hours, giving participants ample time to ideate, develop, and present their projects.",
+        "The hackathon spans 8 weeks, giving participants ample time to ideate, develop, and present their projects.",
     },
     {
       question: "When will hackX Jr 8.0 take place?",

@@ -204,25 +204,19 @@ const GlitchyBadge = () => {
           animate={{ x: ["-100%", "100%"] }}
           transition={{ duration: 3, repeat: Infinity, repeatDelay: 3 }}
         />
-        <a 
-  href="https://docs.google.com/forms/d/e/1FAIpQLScp96RCDPueL44tYVHQ7T8wEIGjElyYC__sMZT9ZaHwPA7rZQ/viewform?usp=header"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span
-    className={cn(
-      "font-orbitron text-xs md:text-sm font-semibold text-white relative z-10 cursor-pointer hover:opacity-80 transition-opacity",
-      glitch && "animate-pulse"
-    )}
-    style={{
-      textShadow: glitch
-        ? "2px 2px 0 #ff00ff, -2px -2px 0 #00ffff"
-        : "none",
-    }}
-  >
-    REGISTER NOW
-  </span>
-</a>
+        <span
+          className={cn(
+            "font-orbitron text-xs md:text-sm font-semibold text-white relative z-10",
+            glitch && "animate-pulse"
+          )}
+          style={{
+            textShadow: glitch
+              ? "2px 2px 0 #ff00ff, -2px -2px 0 #00ffff"
+              : "none",
+          }}
+        >
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScp96RCDPueL44tYVHQ7T8wEIGjElyYC__sMZT9ZaHwPA7rZQ/viewform">REGISTER NOW</a>
+        </span>
       </motion.div>
     </motion.div>
   );
@@ -417,9 +411,9 @@ export default function HeroSection() {
               >
                 {/* Mascot image */}
                 <img
-                  src="/images/mascott.webp"
+                  src="/images/mascottnew.webp"
                   alt="hackX Jr. Mascot"
-                  className="w-100 h-100 object-contain"
+                  className="w-full h-full object-contain"
                 />
                 
                 <motion.div
