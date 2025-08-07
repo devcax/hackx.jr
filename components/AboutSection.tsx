@@ -110,7 +110,7 @@ export default function AboutSection() {
                 transition={{ type: "spring", stiffness: 400 }}
               >
                 <div className="absolute -left-1 top-0 bottom-0 w-1 bg-gradient-to-b from-space-gradient-start to-space-gradient-end rounded-full" />
-                <p className="text-lg text-gray-300 pl-6 leading-relaxed">
+                <p className="text-lg text-gray-300 pl-6 leading-relaxed mb-50">
                   <span className="text-2xl font-bold bg-gradient-to-r from-space-gradient-start to-space-gradient-end bg-clip-text text-transparent">
                     hackX Jr.
                   </span>{" "}
@@ -121,26 +121,7 @@ export default function AboutSection() {
                 </p>
               </motion.div>
 
-              <motion.div
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
-                whileHover={{ borderColor: "rgba(255,255,255,0.2)" }}
-              >
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-space-gradient-start to-space-gradient-end rounded-xl flex items-center justify-center">
-                    <span className="text-xl font-bold text-slate-800">8</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">
-                    Eighth Edition
-                  </h3>
-                </div>
-                <p className="text-gray-400">
-                  Celebrating the Eighth Edition of empowering creativity, with the theme {" "}
-                  <span className="text-white font-medium">
-                    “Give Shapes to Ideas.”
-                  </span>
-                </p>
-              </motion.div>
-
+          
               <p className="text-gray-300 leading-relaxed">
                 hackX Jr. 8.0 offers school students a unique platform to showcase their innovative ideas, gain exposure to real-world problem solving, and take their first step in transforming ideas into reality.
               </p>

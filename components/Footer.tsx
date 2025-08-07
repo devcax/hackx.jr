@@ -24,13 +24,15 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href:"#home" },
     { name: "About", href: "#about" },
 
     { name: "Timeline", href: "#timeline" },
     { name: "Team", href: "#team" },
 
     { name: "Memories", href: "#memories" },
+    { name: "FAQ", href: "#faq" },
+ 
     
     
   ];
@@ -48,8 +50,8 @@ export default function Footer() {
     },
     {
       icon: Phone,
-      text: "+94 719846904",
-      href: "tel:+94719846904",
+      text: "+94 71 984 6904",
+      href: "tel:+94 71 984 6904",
     },
   ];
 

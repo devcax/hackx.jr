@@ -291,10 +291,20 @@ export default function CompetitionDetails() {
                   </p>
                 </div>
               </div>
-              <button className="text-white font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-2">
-                Contact Our hackX Jr. Team
-                <ChevronRight className="w-4 h-4" />
-              </button>
+              
+<button
+  className="text-white font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-2"
+  onClick={() => {
+    const teamSection = document.getElementById("team");
+    if (teamSection) {
+      teamSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  Contact Our hackX Jr. Team
+  <ChevronRight className="w-4 h-4" />
+</button>
+
             </div>
           </div>
         </motion.div>

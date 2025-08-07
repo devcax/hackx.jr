@@ -67,8 +67,8 @@ export default function TeamSection() {
       role: "Media Coordinator",
       image: "/images/team/NADEESHA.webp",
       social: {
-        email: "ishara@imssa.lk",
-        phone: "123-456-7890",
+        email: "nadessha@3.com",
+        phone: "+94 76 822 4295",
       },
     },
     {
@@ -85,9 +85,18 @@ export default function TeamSection() {
       image: "/images/team/RESHMA.webp",
       social: {
         email: "kasun@imssa.lk",
-        phone: "123-456-7890",
+        phone: "+94 76 205 4022",
       },
     },
+    {
+      name: "Oshani Kavindya",
+      role: "Session Coordinator",
+      image: "/images/team/OSHANI.webp",
+      social: {
+        email: "oshani.kavindya.baok@gmail.com",  
+        phone: "+94 78 189 9608",
+    }
+  },
     
   ];
 

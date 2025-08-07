@@ -36,7 +36,7 @@ export default function AwardsSection() {
       position: "2nd Place",
       title: "First Runner-up",
       prize: "LKR 50,000",
-      icon: Award, /*"Images/secondplace.png"*/// Use image path
+      icon: Medal, /*"Images/secondplace.png"*/// Use image path
       color: "from-gray-300 via-gray-400 to-gray-500",
       bgGradient: "from-gray-400/20 via-gray-400/10 to-transparent",
       shadowColor: "rgba(156, 163, 175, 0.5)",
@@ -46,14 +46,14 @@ export default function AwardsSection() {
       position: "3rd Place",
       title: "Second Runner-up",
       prize: "LKR 30,000",
-      icon: Medal,/*"Images/thirdplace.png",*/ // Use image path
+      icon: Award,/*"Images/thirdplace.png",*/ // Use image path
       color: "from-amber-600 via-amber-700 to-amber-800",
       bgGradient: "from-amber-700/20 via-amber-700/10 to-transparent",
       shadowColor: "rgba(217, 119, 6, 0.5)",
       glowColor: "amber",
     },
   ];
-// ...existing code...
+
 
 // Remove this block; the correct icon rendering is already handled inside the map callback below.
 

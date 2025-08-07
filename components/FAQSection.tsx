@@ -12,33 +12,46 @@ export default function FAQSection() {
   const faqItems = [
     {
       question: "What is hackX Jr. 8.0?",
-      answer:
-        "hackX Jr. 8.0 is an inter-school hackathon that empowers students to develop innovative solutions and demonstrate their technical creativity.",
+      answer: (
+        <>hackX Jr. 8.0 is an inter-school hackathon that empowers students to develop innovative solutions and demonstrate their technical creativity.</>
+      ),
     },
     {
       question: "Who can participate?",
-      answer:
-        "hackX Jr. 8.0 is an inter-school science hackathon open to school students from grades 9 to 13 who are passionate about science, technology, and innovation. Participants can join individually or in teams of 1 to 5 members.",
+      answer: (
+        <>hackX Jr. 8.0 is an inter-school science hackathon open to school students from grades 9 to 13 who are passionate about science, technology, and innovation. Participants can join individually or in teams of 1 to 5 members.</>
+      ),
     },
     {
       question: "What's the theme for this year?",
-      answer:
-        "The theme for hackX Jr. 8.0 is 'Give Shapes to Ideas.' It encourages participants to turn their creative thoughts and imaginative ideas into real, workable solutions. The focus is on bringing concepts to life through design, innovation, and problem-solving.",
+      answer: (
+        <>The theme for hackX Jr. 8.0 is "Give Shapes to Ideas." It encourages participants to turn their creative thoughts and imaginative ideas into real, workable solutions. The focus is on bringing concepts to life through design, innovation, and problem-solving.</>
+      ),
     },
     {
       question: "What are the prizes?",
-      answer:
-        "Prizes include cash rewards, tech gadgets, mentorship opportunities, and scholarships for top-performing teams. Exact details will be announced closer to the event.",
+      answer: (
+        <>
+            
+          <ul className="list-disc pl-5">
+            <li>Winners (1st place): LKR 75,000</li>
+            <li>1st Runners-up (2nd place): LKR 50,000</li>
+            <li>2nd Runners-up (3rd place): LKR 30,000</li>
+          </ul>
+        </>
+      ),
     },
     {
       question: "How long is the competition?",
-      answer:
-        "The hackathon spans 8 weeks, giving participants ample time to ideate, develop, and present their projects.",
+      answer: (
+        <>The hackathon extends over a period of eight weeks, offering participants sufficient time to conceptualize, develop, and present their projects.</>
+      ),
     },
     {
       question: "When will hackX Jr 8.0 take place?",
-      answer:
-        "hackX Jr. 8.0 will take place on the 10 th of November, 2025.",
+      answer: (
+        <>hackX Jr. 8.0 will take place on the 10th of November, 2025.</>
+      ),
     },
   ];
 

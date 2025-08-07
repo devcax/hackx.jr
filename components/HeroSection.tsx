@@ -113,36 +113,43 @@ const GlitchyBadge = () => {
       transition={{ duration: 0.6, delay: 0.8 }}
       className="relative"
     >
+      <motion.a
+      href="https://docs.google.com/forms/d/e/1FAIpQLScp96RCDPueL44tYVHQ7T8wEIGjElyYC__sMZT9ZaHwPA7rZQ/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block"
+      >
       <motion.div
-        className="inline-block px-8 md:px-10 py-4 md:py-5 rounded-full bg-gradient-to-r from-black to-gray-800 border border-white/40 backdrop-blur-md relative overflow-hidden"
+        className="inline-block px-8 md:px-10 py-4 md:py-5 rounded-full bg-gradient-to-r from-black to-gray-800 border border-white/40 backdrop-blur-md relative overflow-hidden cursor-pointer"
         animate={{
-          boxShadow: [
-            "0 0 20px rgba(255, 255, 255, 0.3)",
-            "0 0 40px rgba(255, 255, 255, 0.6)",
-            "0 0 20px rgba(255, 255, 255, 0.3)",
-          ],
+        boxShadow: [
+          "0 0 20px rgba(255, 255, 255, 0.3)",
+          "0 0 40px rgba(255, 255, 255, 0.6)",
+          "0 0 20px rgba(255, 255, 255, 0.3)",
+        ],
         }}
         transition={{ duration: 3, repeat: Infinity }}
       >
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
-          animate={{ x: ["-100%", "100%"] }}
-          transition={{ duration: 3, repeat: Infinity, repeatDelay: 3 }}
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        animate={{ x: ["-100%", "100%"] }}
+        transition={{ duration: 3, repeat: Infinity, repeatDelay: 3 }}
         />
         <span
-          className={cn(
-            "font-orbitron text-xs md:text-sm font-semibold text-white relative z-10",
-            glitch && "animate-pulse"
-          )}
-          style={{
-            textShadow: glitch
-              ? "2px 2px 0 #ff00ff, -2px -2px 0 #00ffff"
-              : "none",
-          }}
+        className={cn(
+          "font-orbitron text-1xl md:text-0.1xl font-semibold text-white relative z-10 flex items-center justify-center w-full h-full",
+          glitch && "animate-pulse"
+        )}
+        style={{
+          textShadow: glitch
+          ? "2px 2px 0 #ff00ff, -2px -2px 0 #00ffff"
+          : "none",
+        }}
         >
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScp96RCDPueL44tYVHQ7T8wEIGjElyYC__sMZT9ZaHwPA7rZQ/viewform">REGISTER NOW</a>
+        REGISTER NOW
         </span>
       </motion.div>
+      </motion.a>
     </motion.div>
   );
 };

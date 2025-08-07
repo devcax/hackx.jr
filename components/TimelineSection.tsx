@@ -16,7 +16,7 @@ import {
 
 export default function TimelineSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-150px" });
 
   const hackXTimelineData = [
     {
@@ -33,7 +33,7 @@ export default function TimelineSection() {
       title: "Awareness Session",
       description:
         "An introductory session to explain the competition details, expectations, and benefits.",
-      icon: Star,
+      icon: Lightbulb,
       date: " 21st August 2025",
       color: "from-purple-500 to-pink-500",
     },
@@ -42,7 +42,7 @@ export default function TimelineSection() {
       title: "Deadline for Proposal Submission",
       description:
         "Last day to submit proposals. Late submissions will not be accepted.",
-      icon: Users,
+      icon: Calendar,
       date: "5th September 2025",
       color: "from-green-500 to-emerald-500",
     },
@@ -51,8 +51,8 @@ export default function TimelineSection() {
       title: "Online Workshop Series 1",
       description:
         "Virtual workshop to guide and mentor teams on refining their ideas.",
-      icon: Lightbulb,
-      date: "12th September 2025",
+      icon: Code,
+      date: "21st September 2025",
       color: "from-yellow-500 to-orange-500",
     },
     {
@@ -60,7 +60,7 @@ export default function TimelineSection() {
       title: " InnoX Semifinal",
       description:
         "Selected teams pitch their ideas in the semifinal round for a chance to enter the finals.",
-      icon: Trophy,
+      icon: Star,
       date: "27th September 2025",
       color: "from-red-500 to-rose-500",
     },
@@ -69,7 +69,7 @@ export default function TimelineSection() {
       title: "Online Workshop Series 2",
       description:
         "Second virtual workshop focused on developing and finalizing the project for the finals.",
-      icon: Calendar,
+      icon: Code,
       date: "11th October 2025",
       color: "from-indigo-500 to-violet-500",
     },
@@ -78,7 +78,7 @@ export default function TimelineSection() {
       title: "Grand Finals",
       description:
         "Top teams compete in the final round and winners are announced.",
-      icon: Code,
+      icon: Trophy,
       date: "10th November 2025",
       color: "from-pink-500 to-purple-500",
     },
