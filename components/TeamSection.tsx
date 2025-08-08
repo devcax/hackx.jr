@@ -50,7 +50,7 @@ export default function TeamSection() {
       image: "/images/team/PASINDU.webp",
       social: {
         email: "pasindukumarage28@gmail.com",
-        phone: "+94 719846904",
+        phone: "+94 71 984 6904",
       },
     },
     {
@@ -67,7 +67,7 @@ export default function TeamSection() {
       role: "Media Coordinator",
       image: "/images/team/NADEESHA.webp",
       social: {
-        email: "nadessha@3.com",
+        email: "nadeesha20030905@gmail.com",
         phone: "+94 76 822 4295",
       },
     },
@@ -76,15 +76,15 @@ export default function TeamSection() {
       role: "Financial Coordinator",
       image: "/images/team/BODHANA.webp",
       social: {
-        email: "kasun@imssa.lk",
-        phone: "123-456-7890",
+        email: "jayawickramabodhana@gmail.com",
+        phone: "+94 76 705 7360",
       },
     }, {
       name: "Reshma Mohomad",
       role: "Partnership Coordinator",
       image: "/images/team/RESHMA.webp",
       social: {
-        email: "kasun@imssa.lk",
+        email: "",
         phone: "+94 76 205 4022",
       },
     },
@@ -96,11 +96,23 @@ export default function TeamSection() {
         email: "oshani.kavindya.baok@gmail.com",  
         phone: "+94 78 189 9608",
     }
+
   },
+
+    {
+      name: "Ashan Wickramanayaka",
+      role: "Marketing coordinator",
+      image: "/images/team/ASHAN.webp",
+      social: {
+        email: "ashanwickramanayaka@ieee.org",
+        phone: "+94 71 984 6904"
+      }
+    },
+  
     
   ];
 
-  return (
+ return (
     <section ref={ref} className="relative py-24 px-4 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
