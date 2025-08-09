@@ -41,6 +41,19 @@ export default function TeamSection() {
       onSelect(emblaApi);
     });
     onSelect(emblaApi);
+
+    // Auto-scroll every 5 seconds
+    const autoplay = setInterval(() => {
+      if (!emblaApi) return;
+      if (emblaApi.canScrollNext()) {
+      emblaApi.scrollNext();
+      } else {
+      emblaApi.scrollTo(0);
+      }
+    }, 5000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(autoplay);
   }, [emblaApi, onSelect]);
 
   const teamMembers = [
@@ -163,12 +176,11 @@ export default function TeamSection() {
                   className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.3333%] p-4"
                 >
                   <div className="group relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center transition-all duration-300 hover:border-white/20 hover:bg-black/60">
-                    <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white/20 shadow-lg">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0"
-                      />
+                    <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden  shadow-lg">
+                      <img src={member.image}
+ alt={member.name}
+  className="w-full h-full object-cover transition-all duration-500 opacity-60 group-hover:opacity-100"
+/>
                       {/* Dark overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 mix-blend-hard-light transition-all duration-500 group-hover:opacity-0" />
                     </div>
