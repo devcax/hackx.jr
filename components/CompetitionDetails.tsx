@@ -196,39 +196,39 @@ export default function CompetitionDetails() {
           >
             <div className="h-full bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-8 hover:border-white/20 transition-all duration-300 hover:bg-black/60">
               <div className="flex items-center gap-3 mb-8">
-                <h3 className="font-orbitron text-2xl font-bold text-white">
-                  Eligibility Requirements
-                </h3>
+          <h3 className="font-orbitron text-2xl font-bold text-white">
+            Eligibility Requirements
+          </h3>
               </div>
 
               <div className="grid md:grid-cols-3 gap-8">
-                {requirements.map((section, index) => (
-                  <motion.div
-                    key={section.category}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  >
-                    <div className="mb-4">
-                      <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">
-                        {section.category}
-                      </h4>
-                      <div className="space-y-3">
-                        {section.items.map((item, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-start gap-2 group"
-                          >
-                            <ChevronRight className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0 group-hover:text-white group-hover:translate-x-1 transition-all duration-200" />
-                            <p className="text-gray-300 text-sm leading-relaxed">
-                              {item}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+          {requirements.map((section, index) => (
+            <motion.div
+              key={section.category}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+            >
+              <div className="mb-4">
+                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">
+            {section.category}
+                </h4>
+                <div className="space-y-3">
+            {section.items.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-start gap-2 group"
+              >
+                <ChevronRight className="w-4 h-4 text-white/60 mt-0.5 flex-shrink-0 group-hover:text-white group-hover:translate-x-1 transition-all duration-200" />
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {item}
+                </p>
+              </div>
+            ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
               </div>
             </div>
           </motion.div>
@@ -244,29 +244,31 @@ export default function CompetitionDetails() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl" />
 
               <div className="relative flex-grow flex flex-col">
-                <div className="w-16 h-16 bg-gradient-to-br from-white to-gray-300 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                  <FileText className="w-8 h-8 text-black" />
-                </div>
+          <div className="w-16 h-16 bg-gradient-to-br from-white to-gray-300 rounded-xl flex items-center justify-center mb-6 mx-auto">
+            <FileText className="w-8 h-8 text-black" />
+          </div>
 
-                <h3 className="font-orbitron text-2xl font-bold text-white mb-4 text-center">
-                  Complete Rulebook
-                </h3>
+          <h3 className="font-orbitron text-2xl font-bold text-white mb-4 text-center">
+            Complete Rulebook
+          </h3>
 
-                <p className="text-gray-300 mb-8 leading-relaxed text-center">
-                  Download the guidelines document for detailed competition
-                  rules, judging criteria, and submission requirements.
-                </p>
+          <p className="text-gray-300 mb-8 leading-relaxed text-center">
+            Download the guidelines document for detailed competition
+            rules, judging criteria, and submission requirements.
+          </p>
 
-                <div className="mt-auto space-y-4">
-                  <motion.button
-                    className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-xl hover:shadow-lg transition-all duration-300 w-full justify-center hover:from-gray-100 hover:to-gray-200"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Download className="w-5 h-5" />
-                    <span>Download PDF</span>
-                  </motion.button>
-                </div>
+          <div className="mt-auto space-y-4">
+            <motion.a
+              href="/Docs/INNOVATORS' GUIDE BOOK hackX Jr. 8.0.pdf"
+              download
+              className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-xl hover:shadow-lg transition-all duration-300 w-full justify-center hover:from-gray-100 hover:to-gray-200"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Download className="w-5 h-5" />
+              <span>Download PDF</span>
+            </motion.a>
+          </div>
               </div>
             </div>
           </motion.div>

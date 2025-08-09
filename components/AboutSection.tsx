@@ -167,16 +167,16 @@ export default function AboutSection() {
 
                   <div className="grid grid-cols-3 gap-4 pt-10 border-t border-white/15">
                     <div>
-                      <p className="text-4xl font-bold text-white">250+</p>
+                      <p className="text-4xl font-bold text-white">500+</p>
                       <p className="text-sm text-white/60">Participants</p>
                     </div>
                     <div>
-                      <p className="text-4xl font-bold text-white">50+</p>
+                      <p className="text-4xl font-bold text-white">75+</p>
                       <p className="text-sm text-white/60">Schools</p>
                     </div>
                     <div>
                       <p className="text-4xl font-bold text-white">100+</p>
-                      <p className="text-sm text-white/60">Submissions</p>
+                      <p className="text-sm text-white/60">New Ideas</p>
                     </div>
                   </div>
                 </div>

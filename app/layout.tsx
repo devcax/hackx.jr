@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "hackX Jr,hackX Jr 8.0, inter-school hackathon, university, innovation, Sri Lanka, IMSSA, Kelaniya",
   authors: [{ name: "IMSSA - University of Kelaniya" }],
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#0A121A",
+  themeColor: "#0a121aff",
 };
 
 export default function RootLayout({
@@ -44,9 +44,11 @@ export default function RootLayout({
       lang="en"
       className={`${orbitron.variable} ${rajdhani.variable} ${exo.variable} ${ethnocentric.variable}`}
     >
-      <body className="bg-cosmic-deep text-white font-rajdhani overflow-x-hidden">
+      
+      <body className="text-white font-rajdhani overflow-x-hidden bg-[#0a121a]">
         <SmoothScroll>{children}</SmoothScroll>
       </body>
+
     </html>
   );
 }
